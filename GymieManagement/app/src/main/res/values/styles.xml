@@ -21,4 +21,8 @@
         <item name="android:paddingEnd">16dp</item>
     </style>
 
+    <style name="AKitButton" parent="AccountKit.Button">
+        <item name="android:background">#33DD00</item>
+    </style>
+
 </resources>

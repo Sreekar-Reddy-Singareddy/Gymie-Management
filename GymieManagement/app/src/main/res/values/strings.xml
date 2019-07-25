@@ -2,5 +2,7 @@
     <string name="app_name">Gymie Management</string>
     <string name="facebook_app_id">472818016596909</string>
     <string name="fb_login_protocol_scheme">fb472818016596909</string>
-    <!--<string name="ACCOUNT_KIT_CLIENT_TOKEN">[ACCOUNT_KIT_CLIENT_TOKEN]</string>-->
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">e33295208bd5869120d05268a78cd77a</string>
+    <string name="ak_login_protocol_scheme">ak472818016596909</string>
+
 </resources>

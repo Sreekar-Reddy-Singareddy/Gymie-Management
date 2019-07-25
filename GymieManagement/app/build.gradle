@@ -32,7 +32,7 @@ dependencies {
 
     // Facebook login API
     implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
-//    implementation 'com.facebook.android:account-kit-sdk:5.+'
+    implementation 'com.facebook.android:account-kit-sdk:5.+'
 
     // Google login API
     implementation 'com.google.android.gms:play-services-auth:15.0.0'
