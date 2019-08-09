@@ -4,5 +4,6 @@
     <string name="fb_login_protocol_scheme">fb472818016596909</string>
     <string name="ACCOUNT_KIT_CLIENT_TOKEN">e33295208bd5869120d05268a78cd77a</string>
     <string name="ak_login_protocol_scheme">ak472818016596909</string>
+    <string name="google_places_api_key">AIzaSyCf7IBCk7-dwHgJOOYwtS2KPBH1wI5RAQE</string>
 
 </resources>

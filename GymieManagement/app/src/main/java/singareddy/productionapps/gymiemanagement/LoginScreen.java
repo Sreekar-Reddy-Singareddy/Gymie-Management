@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import com.facebook.AccessToken;
@@ -63,13 +62,13 @@ public class LoginScreen extends AppCompatActivity {
         Log.i(TAG, "checkUserToken: M Account: "+accountKitMobileOrEmail);
 
         if (facebookAccount != null && !facebookAccount.isExpired()) {
-            launchHomeScreen();
+            launchNextScreen(facebookAccount.getUserId());
         }
         else if (googleAccount != null) {
-            launchHomeScreen();
+            launchNextScreen(googleAccount.getId());
         }
         else if (accountKitMobileOrEmail != null) {
-            launchHomeScreen();
+            launchNextScreen(accountKitMobileOrEmail.getAccountId());
         }
     }
 
@@ -99,7 +98,7 @@ public class LoginScreen extends AppCompatActivity {
                 Log.i(TAG, "onSuccess: **");
                 Log.i(TAG, "onSuccess: Token: "+loginResult.getAccessToken().getToken());
                 Log.i(TAG, "onSuccess: UID: "+loginResult.getAccessToken().getUserId());
-                launchHomeScreen();
+                launchNextScreen(loginResult.getAccessToken().getUserId());
             }
 
             @Override
@@ -139,9 +138,30 @@ public class LoginScreen extends AppCompatActivity {
         startActivityForResult(intent, EMAIL_LOGIN_REQ);
     }
 
-    private void launchHomeScreen() {
-        Intent homeIntent = new Intent(LoginScreen.this, HomeScreen.class);
-        startActivity(homeIntent);
+    private void launchNextScreen(String userId) {
+        Log.i(TAG, "launchNextScreen: Logged In User ID: "+userId);
+
+        /**
+         * DATA: This data originally comes from app server through
+         * HTTP response in the form of JSON string. For now it is
+         * DUMMY DATA.
+         */
+        boolean isItSuperAdmin = false;
+
+        // If the user is the super admin, take them directly to
+        // the home screen instead of GymSelectScreen.
+        if (isItSuperAdmin) {
+            Intent homeScreenIntent = new Intent(this, HomeScreen.class);
+            startActivity(homeScreenIntent);
+            finish();
+            return;
+        }
+
+        // If the user is not the super admin, then take them to
+        // GymSelectScreen so that they can register under a gym.
+        Intent gymSelectScreenIntent = new Intent(LoginScreen.this, GymSelectScreen.class);
+        gymSelectScreenIntent.putExtra(GymSelectScreen.INTENT_EXTRA_LOGGED_USER_ID, userId);
+        startActivity(gymSelectScreenIntent);
         finish();
     }
 
@@ -157,7 +177,7 @@ public class LoginScreen extends AppCompatActivity {
                     Log.i(TAG, "onSuccess: Google signin success!");
                     Log.i(TAG, "onSuccess: Name: "+googleSignInAccount.getDisplayName());
                     Log.i(TAG, "onSuccess: UID: "+googleSignInAccount.getId());
-                    launchHomeScreen();
+                    launchNextScreen(googleSignInAccount.getId());
                 }
             });
             signedInAccount.addOnFailureListener(new OnFailureListener() {
@@ -172,7 +192,7 @@ public class LoginScreen extends AppCompatActivity {
             // Activity result by the Account Kit for Phone login
             AccountKitLoginResult loginResult = data.getParcelableExtra(AccountKitLoginResult.RESULT_KEY);
             if (loginResult.getAccessToken() != null) {
-                launchHomeScreen();
+                launchNextScreen(loginResult.getAccessToken().getAccountId());
             }
             Log.i(TAG, "onActivityResult: User Token: "+loginResult.getAccessToken().getToken());
             Log.i(TAG, "onActivityResult: Account ID"+loginResult.getAccessToken().getAccountId());
@@ -183,7 +203,7 @@ public class LoginScreen extends AppCompatActivity {
             com.facebook.accountkit.AccessToken emailToken =
                     accountKitResult.getAccessToken();
             if (emailToken != null) {
-                launchHomeScreen();
+                launchNextScreen(emailToken.getAccountId());
             }
             Log.i(TAG, "onActivityResult: Email Account ID: "+emailToken.getAccountId());
         }

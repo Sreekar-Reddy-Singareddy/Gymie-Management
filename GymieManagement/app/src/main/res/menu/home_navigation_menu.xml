@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/home_nav_group_gym"
+        android:checkableBehavior="none"
+        android:visible="true"
+        android:enabled="true">
+        <item
+            android:id="@+id/home_nav_menu_item_gyms"
+            android:icon="@drawable/gyms"
+            android:onClick="navMenuItemClicked"
+            android:title="Gyms" />
+        <item
+            android:icon="@drawable/qrcode"
+            android:id="@+id/home_nav_menu_item_attendance"
+            android:onClick="navMenuItemClicked"
+            android:title="Attendance" />
+        <item
+            android:icon="@drawable/request"
+            android:id="@+id/home_nav_menu_item_requests"
+            android:onClick="navMenuItemClicked"
+            android:title="Requests" />
+    </group>
+
+    <group android:id="@+id/home_nav_group_people">
+        <item
+            android:icon="@drawable/members"
+            android:id="@+id/home_nav_menu_item_members"
+            android:onClick="navMenuItemClicked"
+            android:title="Members" />
+        <item
+            android:icon="@drawable/trainer"
+            android:id="@+id/home_nav_menu_item_trainers"
+            android:onClick="navMenuItemClicked"
+            android:title="Trainers" />
+        <item
+            android:icon="@drawable/staff"
+            android:id="@+id/home_nav_menu_item_staff"
+            android:onClick="navMenuItemClicked"
+            android:title="Staff" />
+    </group>
+
+    <group android:id="@+id/home_nav_group_core_business">
+        <item
+            android:icon="@drawable/packages"
+            android:id="@+id/home_nav_menu_item_packages"
+            android:onClick="navMenuItemClicked"
+            android:title="Packages" />
+        <item
+            android:icon="@drawable/stock"
+            android:id="@+id/home_nav_menu_item_stock"
+            android:onClick="navMenuItemClicked"
+            android:title="Stock" />
+        <item
+            android:icon="@drawable/addons"
+            android:id="@+id/home_nav_menu_item_addons"
+            android:onClick="navMenuItemClicked"
+            android:title="Add-ons" />
+        <item
+            android:icon="@drawable/events"
+            android:id="@+id/home_nav_menu_item_events"
+            android:onClick="navMenuItemClicked"
+            android:title="Events" />
+    </group>
+
+    <group android:id="@+id/home_nav_group_operations">
+        <item
+            android:icon="@drawable/enquiry"
+            android:id="@+id/home_nav_menu_item_enquiries"
+            android:onClick="navMenuItemClicked"
+            android:title="Enquiries" />
+        <item
+            android:icon="@drawable/payments"
+            android:id="@+id/home_nav_menu_item_payments"
+            android:onClick="navMenuItemClicked"
+            android:title="Payments" />
+        <item
+            android:icon="@drawable/reports"
+            android:id="@+id/home_nav_menu_item_reports"
+            android:onClick="navMenuItemClicked"
+            android:title="Reports" />
+    </group>
+
+    <group android:id="@+id/home_nav_group_settings">
+        <item
+            android:icon="@drawable/settings"
+            android:id="@+id/home_nav_menu_item_settings"
+            android:onClick="navMenuItemClicked"
+            android:title="Settings" />
+        <item
+            android:icon="@drawable/info"
+            android:id="@+id/home_nav_menu_item_aboutus"
+            android:onClick="navMenuItemClicked"
+            android:title="About us" />
+    </group>
+
+
+</menu>

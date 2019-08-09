@@ -3,16 +3,22 @@
     package="singareddy.productionapps.gymiemanagement">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
-        android:fullBackupContent="@xml/backup_config"
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_config"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeScreen"></activity>
+        <activity android:name=".GymDetailsScreen"></activity>
+        <activity android:name=".AddGymScreen" />
+        <activity android:name=".ManageGymsScreen" />
+        <activity android:name=".RoleSelectScreen" />
+        <activity android:name=".GymSelectScreen" />
+        <activity android:name=".HomeScreen" />
         <activity android:name=".LoginScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,17 +26,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Facebook SDK related-->
-        <meta-data android:name="com.facebook.accountkit.ApplicationName"
+        </activity> <!-- Facebook SDK related -->
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
             android:value="@string/app_name" />
-        <meta-data android:name="com.facebook.sdk.ApplicationId"
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
-        <meta-data android:name="com.facebook.accountkit.ClientToken"
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
             android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
-        <activity
-            android:name="com.facebook.accountkit.ui.AccountKitActivity" />
+
+        <activity android:name="com.facebook.accountkit.ui.AccountKitActivity" />
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -38,12 +45,16 @@
         <activity android:name="com.facebook.accountkit.ui.AccountKitEmailRedirectActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="@string/ak_login_protocol_scheme" />
             </intent-filter>
-        </activity>
-
+        </activity> <!-- Google API related -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_places_api_key" />
     </application>
 
 </manifest>

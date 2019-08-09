@@ -21,8 +21,30 @@
         <item name="android:paddingEnd">16dp</item>
     </style>
 
-    <style name="AKitButton" parent="AccountKit.Button">
-        <item name="android:background">#33DD00</item>
+    <style name="RoleSelectCardText" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:textColor">@color/themeColor</item>
+    </style>
+
+    <style name="RoleSelectCard" parent="CardView">
+        <!--<item name="android:layout_margin">8dp</item>-->
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">5dp</item>
+    </style>
+
+    <style name="NavItemTextView" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NavItemIcon">
+        <item name="android:padding">8dp</item>
     </style>
 
 </resources>
