@@ -1,4 +1,4 @@
-package singareddy.productionapps.gymiemanagement.adapters;
+package singareddy.productionapps.gymiemanagement.common;
 
 import android.content.Context;
 import android.support.constraint.ConstraintLayout;

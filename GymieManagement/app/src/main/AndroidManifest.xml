@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -13,20 +14,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GymDetailsScreen"></activity>
-        <activity android:name=".AddGymScreen" />
-        <activity android:name=".ManageGymsScreen" />
-        <activity android:name=".RoleSelectScreen" />
-        <activity android:name=".GymSelectScreen" />
-        <activity android:name=".HomeScreen" />
-        <activity android:name=".LoginScreen">
+        <activity android:name=".requests.RequestsScreen"></activity>
+        <activity android:name=".attendance.ManageAttendanceScreen" />
+        <activity android:name=".attendance.ScanAttendanceScreen" />
+        <activity android:name=".gyms.AddGymScreen" />
+        <activity android:name=".gyms.ManageGymsScreen" />
+        <activity android:name=".login.RoleSelectScreen" />
+        <activity android:name=".login.GymSelectScreen" />
+        <activity android:name=".HomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Facebook SDK related -->
+        </activity>
+        <activity android:name=".login.LoginScreen">
+
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" /> <!-- Facebook SDK related -->
         <meta-data
             android:name="com.facebook.accountkit.ApplicationName"
             android:value="@string/app_name" />

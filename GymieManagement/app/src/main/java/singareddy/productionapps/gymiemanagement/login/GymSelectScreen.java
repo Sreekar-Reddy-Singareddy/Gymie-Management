@@ -1,18 +1,13 @@
-package singareddy.productionapps.gymiemanagement;
+package singareddy.productionapps.gymiemanagement.login;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.ExpandableListView;
-import android.widget.SearchView;
 
-import java.util.List;
-
-import singareddy.productionapps.gymiemanagement.adapters.ShowGymsAdapter;
+import singareddy.productionapps.gymiemanagement.R;
+import singareddy.productionapps.gymiemanagement.common.ui.AllGymsFragment;
 import singareddy.productionapps.gymiemanagement.entities.Gym;
 import singareddy.productionapps.gymiemanagement.listeners.GymClickListener;
 

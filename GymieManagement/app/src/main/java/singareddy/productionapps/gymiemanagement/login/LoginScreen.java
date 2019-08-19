@@ -1,4 +1,4 @@
-package singareddy.productionapps.gymiemanagement;
+package singareddy.productionapps.gymiemanagement.login;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -30,6 +30,9 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
 import java.util.Arrays;
+
+import singareddy.productionapps.gymiemanagement.HomeScreen;
+import singareddy.productionapps.gymiemanagement.R;
 
 public class LoginScreen extends AppCompatActivity {
     private static final int GOOGLE_SIGNIN_REQ = 11;

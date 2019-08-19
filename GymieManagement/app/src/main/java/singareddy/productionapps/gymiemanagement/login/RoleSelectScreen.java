@@ -1,4 +1,4 @@
-package singareddy.productionapps.gymiemanagement;
+package singareddy.productionapps.gymiemanagement.login;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
+
+import singareddy.productionapps.gymiemanagement.HomeScreen;
+import singareddy.productionapps.gymiemanagement.R;
 
 public class RoleSelectScreen extends AppCompatActivity {
     // Constants

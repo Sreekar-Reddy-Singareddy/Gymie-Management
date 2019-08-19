@@ -4,21 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".gyms.ManageGymsScreen">
+    tools:context=".requests.RequestsScreen">
 
-
-    <FrameLayout
-        android:id="@+id/frag_all_gyms_fl_container"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_screen_rv_requests"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    </FrameLayout>
+    </android.support.v7.widget.RecyclerView>
+
 </android.support.constraint.ConstraintLayout>

@@ -1,4 +1,4 @@
-package singareddy.productionapps.gymiemanagement;
+package singareddy.productionapps.gymiemanagement.gyms;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,9 +8,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import singareddy.productionapps.gymiemanagement.R;
+import singareddy.productionapps.gymiemanagement.common.ui.AllGymsFragment;
 import singareddy.productionapps.gymiemanagement.entities.Gym;
 import singareddy.productionapps.gymiemanagement.listeners.GymClickListener;
 

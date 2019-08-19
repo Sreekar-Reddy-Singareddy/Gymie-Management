@@ -38,11 +38,15 @@ dependencies {
     implementation 'com.facebook.android:account-kit-sdk:5.+'
 
     // Google API
-    implementation 'com.google.android.gms:play-services-auth:15.0.0'
-    implementation 'com.google.android.libraries.places:places:1.+'
+    implementation 'com.google.android.gms:play-services-auth:15.0.0' // Google Login
+    implementation 'com.google.android.libraries.places:places:1.+' // Google Places
+    implementation 'com.google.android.gms:play-services-vision:15.0.2' // Google Vision
+
+    // Third Party API
+    implementation 'info.androidhive:barcode-reader:1.1.5'
 
     // Charts API
-//    implementation 'com.github.PhilJay:MPAndroidChart:v3.+'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
     // App architecture related
     implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"

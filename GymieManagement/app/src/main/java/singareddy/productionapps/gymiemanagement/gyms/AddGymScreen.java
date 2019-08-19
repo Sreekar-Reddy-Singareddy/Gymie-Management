@@ -1,4 +1,4 @@
-package singareddy.productionapps.gymiemanagement;
+package singareddy.productionapps.gymiemanagement.gyms;
 
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
@@ -17,6 +17,7 @@ import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 
 import java.util.Arrays;
 
+import singareddy.productionapps.gymiemanagement.R;
 import singareddy.productionapps.gymiemanagement.entities.Gym;
 
 public class AddGymScreen extends AppCompatActivity {

@@ -13,16 +13,28 @@ import android.view.View;
 
 import com.facebook.AccessToken;
 import com.facebook.accountkit.AccountKit;
-import com.facebook.login.Login;
 import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 
-import java.util.List;
+import singareddy.productionapps.gymiemanagement.attendance.ManageAttendanceScreen;
+import singareddy.productionapps.gymiemanagement.attendance.ScanAttendanceScreen;
+import singareddy.productionapps.gymiemanagement.gyms.ManageGymsScreen;
+import singareddy.productionapps.gymiemanagement.login.LoginScreen;
+import singareddy.productionapps.gymiemanagement.requests.RequestsScreen;
 
-import singareddy.productionapps.gymiemanagement.entities.Gym;
-
+/**
+ * Once the person has logged in, we must check it is.
+ * We query the STAFF table and know the role of the logged user.
+ * If the user is an admin, then how many gyms is he an admin for?
+ * If he is admin of only 1 gym, by default show something.
+ * If he is admin of multiple gyms, then let him choose which gym
+ * he wants to manage.
+ * In the navigation view header, the user can choose and change
+ * the gym they want to manage. Clicking the header view displays a
+ * dialog box where they can choose a gym.
+ */
 public class HomeScreen extends AppCompatActivity {
 
     private static final String TAG = "HomeScreen";
@@ -80,6 +92,14 @@ public class HomeScreen extends AppCompatActivity {
             case R.id.home_nav_menu_item_gyms:
                 Intent manageGymsIntent = new Intent(this, ManageGymsScreen.class);
                 startActivity(manageGymsIntent);
+                break;
+            case R.id.home_nav_menu_item_attendance:
+                Intent manageAttendanceIntent = new Intent(this, ManageAttendanceScreen.class);
+                startActivity(manageAttendanceIntent);
+                break;
+            case R.id.home_nav_menu_item_requests:
+                Intent manageRequestsIntent = new Intent(this, RequestsScreen.class);
+                startActivity(manageRequestsIntent);
                 break;
         }
     }
